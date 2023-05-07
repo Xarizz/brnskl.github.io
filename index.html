@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BRNSKL</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: black;
+			background-image: url('https://i.redd.it/kmnm603a8yia1.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 100vh;
+			background-size: 50%;
+			background-repeat: no-repeat;
+			animation: shake 0.5s ease-in-out;
+
+		}
+
+		@keyframes shake {
+			0% {
+				transform: translate(0, 0);
+			}
+
+			25% {
+				transform: translate(5px, 0);
+			}
+
+			50% {
+				transform: translate(0, 0);
+			}
+
+			75% {
+				transform: translate(-5px, 0);
+			}
+
+			100% {
+				transform: translate(0, 0);
+			}
+		}
+
+
+		.blurred-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: inherit;
+			filter: blur(10px);
+		}
+
+		.header {
+			padding: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			color: white;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		#accountList {
+			padding: 1px;
+			border: 1px solid #ccc;
+			margin-bottom: 1px;
+			cursor: pointer;
+		}
+
+		.centered-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: white;
+		}
+
+		.centered-content button {
+			padding: 10px;
+			background-color: #1b1b1b;
+			color: white;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.centered-content button:hover {
+			background-color: #272727;
+		}
+	</style>
+</head>
+
+<body>
+	<audio id="backgroundMusic"
+		src="https://cdn.discordapp.com/attachments/736519012841685042/1104808598367895582/dol.mp3" loop
+		autoplay></audio>
+	<script src="./script.js">
+
+
+	</script>
+	<div class="blurred-bg"></div>
+	<header class="header">
+		BRNSKL
+	</header>
+	<div class="centered-content">
+		<h2>STEAM ACCOUNT GENERATOR</h2>
+		<p>1.CLICK A GENERATE BUTTON</p>
+		<p>2.SOLVE CAPTCHA ON NEW TAB (DONT CLOSE IT)</p>
+		<p>3.PRESS YES TO THE AGE VERIF</p>
+		<div id="accountList" class="hidden"></div>
+		<button id="generate">generate</button>
+		<button onclick="toggleHistory()">history</button>
+	</div>
+</body>
+
+</html>
